@@ -1,0 +1,286 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap";
+
+:root {
+    --color-rocket: #7159c1;
+    --color-green:  rgb(0, 255, 191);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {    
+    background: url("img/rocket.jpg") center;
+    background-size: 100%;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+header {
+    margin: 0;
+    padding: 30px;
+    border-bottom: 1px solid #333;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.Links {
+    text-align: center;
+}
+
+.Links a{
+    color: white;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0 30px;
+    text-decoration: none;
+    transition: color 1000ms;
+}
+
+.Links a:hover{
+    color: var(--color-rocket);
+    transition: color 500ms;
+    border-bottom: 2px solid var(--color-green);
+}
+
+.logo-img img{
+    margin-top: 30px;
+    border-radius: 50%;
+    width: 300px;
+}
+
+.description h1{
+    max-width: 200px; 
+    margin: 32px auto;
+    font-size: 44px;
+    line-height: 44px;
+    text-shadow: 2px 2px 4px white;
+    color: var(--color-green);    
+}
+
+
+.techs h2 p img li{
+    max-width: 200px;
+    text-align: center;
+}
+
+
+
+.description .techs {
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: normal;
+    margin-top: 8px;
+    opacity: 0.8;
+}
+
+.techs p{
+    margin: 30px;
+    padding-top: 30px;
+    font-size: 28px;
+}
+
+.lings{
+    float: left;
+    width: 20%;
+    padding-bottom: 50px;  
+}
+.techs::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+@media screen and (max-width: 500px) {
+    .lings {
+      width: 100%;
+    }
+  }
+
+.techs img {
+    width: 96px;
+    transition: 1500ms;
+}
+
+.techs img:hover {
+    width: 120px;
+    transition: 400ms;
+}
+
+/* **************** FOOTER **************** */
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-height: 120%;
+    border-top: 1px solid #333;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px ;
+} 
+
+.footer-links { 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    
+}
+
+.footer-links svg {
+    cursor: pointer;
+    transition: 1500ms;
+    max-width: 50%;
+}
+
+.footer-links svg:hover {
+    transform: rotate(360deg);
+    transition: 400ms;
+}
+
+
+.wrapper h2{
+    padding: 32px;
+    font-size: 34px;
+    line-height: 52px;
+    font-weight: bold; 
+    line-height: 44px;
+    text-shadow: 2px 2px 4px white;
+    color: var(--color-green);      
+}
+
+/* **************** CARDS **************** */
+
+.cards {
+    max-width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    
+}
+
+.card {
+    border: 3px solid white;
+    display: grid;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 400ms;
+    height:  100%;
+    background-color: rgba(255, 255, 255, 0.836);
+}
+
+.card__image-container img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.card__content,
+.card__info {
+    padding-top: 24px;
+}
+
+.card__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.card__content p{
+    font-size: 26px;
+}
+
+.card__info .modules {
+    font-size: 16px;
+    padding-bottom: 0;
+}
+
+.card__price {
+    background-color: var(--color-rocket);
+    filter: brightness(80%);
+    padding: 5px 20px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.card:hover {
+    border-color: var(--color-green);
+    transition: 700ms;
+    transform: translateY(-20px);
+}
+
+.card p {
+    color: rgb(0, 0, 0);
+}
+
+.card p strong {
+    color: black;
+}
+
+.card img {
+    border: 1px solid;
+    border-color: var(--color-green);
+}
+
+/* **************** MODAL **************** */
+
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal {
+    background-color: white;
+    width: 90%;
+    height: 90%;
+    margin: 5vh auto;
+    position: relative;
+    display: flex;
+}
+
+.modal .close-modal {
+    color: black;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    cursor: pointer;
+}
+
+.modal .maximize {
+    color: black;
+    position: absolute;
+    top: 8px;
+    right: 36px;
+    cursor: pointer;
+}
+
+/* **************** MODAL.ACTIVE **************** */
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+iframe {
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    top: 5%;
+}
+
+/* **************** MODAL.MAXIMIZE.ACTIVE **************** */
+
+.modal.maximize-modal {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    position: relative;
+    display: flex;
+}
