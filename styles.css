@@ -12,7 +12,7 @@
 }
 
 body {    
-    background: url("img/rocket.jpg") center;
+    background: url("img/rocket.jpg") scroll;
     background-size: 100%;
     font-family: 'Roboto', sans-serif;
     color: rgb(255, 255, 255);
